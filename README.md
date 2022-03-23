@@ -1,45 +1,38 @@
-## Classification des téléphones suivant plusieurs caractéristiques
-Le but est la réalisation d'un classifieur permettant la classification de 2000 modèles de téléphones suivant 4 catégories de prix (0, 1, 2 et 3) suivant plusieurs paramètres tels que la durée que tient la batterie, la taille de l'écran ou plusieurs fonctionnalités disponible ou non comme le wifi ou encore le bluetooth. 
+## App price classification
+The goal is the realization of a classifier allowing the classification of 2000 models of telephones according to 4 categories of price (0, 1, 2 and 3) according to several parameters such as the duration that holds the battery, the size of the screen or several functionalities available or not like the wifi or the bluetooth. 
 
 
-Dataset que vous pouvez retrouver sur Kaggle [ici]("https://www.kaggle.com/iabhishekofficial/mobile-price-classification")
-## Organisation du dépôt 
-Ce dépôt est constitué des fichiers suivants : 
-- notebook-price.ipynb : contient le notebook Jupyter traitant le projet
-- train.csv : dataset contenant les instances d'entrainement et de test des modèles de classification
-- test.csv : dataset utilisable pour du clustering éventuellement
+Dataset that you can find on Kaggle [here]("https://www.kaggle.com/iabhishekofficial/mobile-price-classification")
+## Organization of the repository 
+This repository consists of the following files: 
+- notebook-price.ipynb : contains the Jupyter notebook processing the project
+- train.csv : dataset containing the training and test instances of the classification models
+- test.csv : dataset that can be used for clustering
 
-## Pré-requis logiciel
-Ce projet utilise : 
-- Python 3.8 et +
+## Software requirements
+This project uses : 
+- Python 3.8 and up
 
-Ainsi que les package et modules Python suivants : 
+As well as the following Python packages and modules: 
 - scikit-learn
 - Numpy
 - Pandas
 - Matplotlib (module Pyplot)
 - Seaborn 
 
-## Contenu du projet 
-Le projet (disponible au niveau du notebook Jupyter) est constitué des étapes suivantes : 
-1) Une visualisation des données permettant la visualisation de la distribution de différentes variables
-2) Pré-traitement des données (normalisation et subdivision du dataset en deux pour l'entrainement et le test)
-3) Classification sans réduction de la dimension utilisant 
-    * Un modèle KNN
-    * Un modèle basé sur un Random Forrest
-    * Un modèle basé sur un arbre de décision
-    * Un SVM
+## Content of the project
+1) A data visualization allowing the visualization of the distribution of different variables
+2) Pre-processing of the data (normalization and subdivision of the dataset in two for training and testing)
+3) Classification without dimension reduction using 
+    * A KNN model
+    * A Random Forrest based model
+    * A decision tree based model
+    * A SVM
 
-## Performances atteintes
-|   Algorithme choisi    |   Précision en test (%)    |
-|---    |:-:    |
-|   KNN (avec normalisation)    |   63.67    |
-|   KNN (sans normalisation)    |   94.17    |
-|   Random Forrest    |    88.83  |
-|   Decision Tree    |   85.33   |
-|   SVM (avec normalisation)    |   87.83    |
-|   SVM (sans normalisation)    |   96    |
-
-## Remarques
-- Dans un autre projet ayant des variables sous forme de catégories, il serait préférable de ne pas utiliser de normalisation avec StandardScaler en utilisant d'autres types de normalisation, par exemple MinMax ou autre. 
-- Une autre manière de travailler serait de normaliser que les variables sous forme de distribution et laisser les variables sous forme de catégories
+## Performance achieved
+| Algorithm | Accuracy in test (%)
+|--- |:-: |
+| KNN (without normalization) | 94.17 |
+| Random Forrest | 89.17 |
+| Decision Tree | 85.33 |
+| SVM (without normalization) | 96 |
